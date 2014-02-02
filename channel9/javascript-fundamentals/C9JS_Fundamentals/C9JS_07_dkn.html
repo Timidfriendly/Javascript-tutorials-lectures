@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7. JavaScript Functions</title>
+  <script type="text/javascript">
+
+/*
+function myNewFunction() {
+  alert("Howdy!");
+}
+
+myNewFunction();
+
+
+function myNewFunction(myValue) {
+  alert("Howdy, " + myValue);
+}
+myNewFunction("pardner");
+
+
+function add(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+}
+var myResult = add(1, 2);
+alert(myResult);
+
+
+function add() {
+  var tempValue = 0;
+  for (i = 0; i < arguments.length; i++)
+  {
+    tempValue += arguments[i];
+  }
+  return tempValue;
+}
+var myValue = add(1,2,3,4,5);
+alert(myValue);
+
+
+// Function literal
+var addMe = function() {
+  return arguments[0] + arguments[1];
+}
+
+var myNewValue = addMe(1,2);
+//var myNewValue = bob(1,2);
+alert(myNewValue);
+
+
+var myResult = (function() {
+  return arguments[0] + arguments[1];
+})(1,2);
+alert(myResult);
+*/
+
+/* alert((function() {
+  return arguments[0] + arguments[1];
+})(1,3));
+ */
+
+
+function myAdder (firstNumber,secondNumber) {
+	total = firstNumber + secondNumber;
+	return total;
+}
+var total = myAdder(2,5);
+alert(total);
+
+function myNewFunction2(textBoxVal) {
+	var submitButton = document.getElementById("submitButton");
+	var textBox = document.getElementById("textBox");
+	var textBoxVal = textBox.value;
+	submitButton.onclick = function() {
+		var textBoxVal = textBox.value;
+		alert("Howdy, " + textBoxVal);
+		return false;
+	 }
+}
+
+  </script>
+</head>
+<body>
+  <h1>7. JavaScript Functions</h1>
+  <form action="" >
+  	<input id="textBox" type="text" value="initial value" />
+  	<input id="submitButton" type="submit" value="Click me" />
+  </form>
+  <hr>
+  <input type="submit" value="Click me" onClick="myAdder();" />
+</body>
+<script>
+	myNewFunction2("valuePassedIn");
+</script>
+</html>
